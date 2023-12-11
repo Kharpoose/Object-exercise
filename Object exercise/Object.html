@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object Exercise</title>
+</head>
+
+<body>
+    <script>
+        const basketball = {
+            price: 2095
+        };
+        console.log(basketball.price);
+
+        const basketball2 = {
+            price: 2595
+        };
+
+        basketball.price += 500;
+        console.log(basketball.price);
+
+        basketball['delivery-time'] = '3 days';
+        console.log(basketball);
+
+        const futball = {
+            price: 5095
+        };
+
+        function comparePrice() {
+            const full_pize = basketball.price + futball.price
+            return full_pize;
+        };
+
+        console.log(comparePrice());
+
+        function isSameProduct(product1, product2) {
+            if (product1.price === product2.price) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+        console.log(isSameProduct(basketball, futball));
+        console.log(isSameProduct(basketball, basketball2));
+    </script>
+</body>
+
+</html>
